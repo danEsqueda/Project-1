@@ -1,42 +1,102 @@
 <!DOCTYPE>
 <html>
 
-  <head></head>
+  <head>
+    <meta charset="utf-8">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
 
   <body>
 
     <form>
-      <p>
-      <label for="get in the ring">
-        Who would you like to box with?
-      </label>
-      <select name="referrer">
-        <option value="Mike Tyson">Mike Tyson</option>
-        <option value="Muhammad Ali">Muhammad Ali</option>
-        <option value="Wladimir Klitschko">Wladimir Klitschko</option>
-        <option value="George Foreman">George Foreman</option>
-      </select>
-      </p>
-      <p>
-      <label for="punches">
-        How many times do you think you could hit them before getting knocked out?
-      </label>
 
-      <input type="radio" value="1-2" />
-      1-2
-      <input type="radio" value="3-4" />
-      3-4
-      <input type="radio" value="5-6" />
-      5-6
-      <input type="radio" value="7+" />
-      7+
+      <section class="boxingChoices">
+        <p id="boxer">
+        <label for="get in the ring">
+          Who would you like to box with?
+        </label>
+        <select name="referrer">
+          <option value="Mike Tyson">Mike Tyson</option>
+          <option value="Muhammad Ali">Muhammad Ali</option>
+          <option value="Wladimir Klitschko">Wladimir Klitschko</option>
+          <option value="George Foreman">George Foreman</option>
+        </select>
+        </p>
+      </section>
 
-      </p>
-      <p>
-        Input your name and click Ready To Rumble to fight!:
-        <input type="text"/>
-        <input type="submit" value="Ready To Rumble" />
-      </p>
+      <section id="punches" class="boxingChoices">
+          <p>
+        <label for="punches">
+          How many times do you think you could hit them before getting knocked out?
+        </label>
+
+        <input type="radio" name="punch" value="0" checked="checked" />
+        0
+        <input type="radio" name="punch" value="1-2" />
+        1-2
+        <input type="radio" name="punch" value="3-4" />
+        3-4
+        <input type="radio" name="punch" value="5-6" />
+        5-6
+        <input type="radio" name="punch" value="7+" />
+        7+
+
+        </p>
+      </section>
+
+      <section id="ready" class="getReady">
+        <p>
+          Input your name and click Ready To Rumble to fight!:
+          <input type="text"/>
+          <input type="submit" value="Ready To Rumble" />
+        </p>
+      </section>
+
+      <section id="unorderedList" class="list">
+        <ul>
+          <li>boxer</li>
+          <li>punches</li>
+          <li>ready</li>
+        </ul>
+      </section>
+
+      <script>
+        var colorChange = document.getElementsByClassName('boxingChoices');
+        for (var i = 0; i < colorChange.length; i++) {
+          colorChange[i].className = 'listItems';
+        }
+
+        var classChange = document.querySelectorAll('li');
+
+
+        // var classChange = document.getElementById('boxingChoices');
+        // classChange += document.getElementById('unorderedList');
+        // if (classChange.length > 0) {
+        //   for (var i = 0; i < classChange.length; i++) {
+        //     classChange[i].className = "listItems";
+        //   }
+        // }
+
+
+
+        classChange[0].className = 'listItems';
+
+        // var colorChange = document.getElementsByClassName("boxingChoices");
+        // colorChange += document.getElementsByClassName("list");
+        // colorChange.className = "listItems";
+
+
+
+
+        // for (var i = 0; i < colorChange.length; i++) {
+        //   colorChange.className = "listItems";
+        // }
+
+
+
+
+      </script>
 
 
     </form>

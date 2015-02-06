@@ -1,16 +1,8 @@
-header {
-  font-size: 24pt;
-  padding: 10px;
-  margin-right: 50px;
-  text-align: center;
+body {
+  font-family: courier;
 }
 
-h1 {
-  outline-color: #3333CC;
-  color: #33CCFF;
-}
 
-p {
-  font-style: italic;
-  padding: 10px;
+.listItems {
+  background-color: #FF99FF;
 }
