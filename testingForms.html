@@ -16,7 +16,7 @@
         <label for="get in the ring">
           Who would you like to box with?
         </label>
-        <select name="referrer">
+        <select id ="referrer" name="referrer">
           <option value="Mike Tyson">Mike Tyson</option>
           <option value="Muhammad Ali">Muhammad Ali</option>
           <option value="Wladimir Klitschko">Wladimir Klitschko</option>
@@ -48,51 +48,47 @@
       <section id="ready" class="getReady">
         <p>
           Input your name and click Ready To Rumble to fight!:
-          <input type="text"/>
+          <input id="input" type="text"/>
           <input type="submit" value="Ready To Rumble" />
         </p>
       </section>
 
       <section id="unorderedList" class="list">
         <ul>
-          <li>boxer</li>
+          <li id="boxer">boxer</li>
           <li>punches</li>
           <li>ready</li>
         </ul>
       </section>
 
       <script>
-        var colorChange = document.getElementsByClassName('boxingChoices');
-        for (var i = 0; i < colorChange.length; i++) {
-          colorChange[i].className = 'listItems';
-        }
+        function setup() {
 
-        var classChange = document.querySelectorAll('li');
+          var textInput;
+          textInput = document.getElementById("referrer");
+          textInput.focus();
+          }
+
+          window.addEventListener('load', setup, false);
+
+          var colorChange = document.getElementsByClassName('boxingChoices');
+          for (var i = 0; i < colorChange.length; i++) {
+            colorChange[i].className = 'listItems';
+          }
+
+          var classChange = document.querySelectorAll('li');
+          classChange[0].className = 'listItems';
 
 
-        // var classChange = document.getElementById('boxingChoices');
-        // classChange += document.getElementById('unorderedList');
-        // if (classChange.length > 0) {
-        //   for (var i = 0; i < classChange.length; i++) {
-        //     classChange[i].className = "listItems";
-        //   }
+
+
+        // var classChange = document.querySelectorAll("section.boxingChoices1, section.list");
+
+        // console.log(classChange.);
+
+        // for (var i = 0; i < classChange.length; i++) {
+        //   classChange[i].className = 'listItems';
         // }
-
-
-
-        classChange[0].className = 'listItems';
-
-        // var colorChange = document.getElementsByClassName("boxingChoices");
-        // colorChange += document.getElementsByClassName("list");
-        // colorChange.className = "listItems";
-
-
-
-
-        // for (var i = 0; i < colorChange.length; i++) {
-        //   colorChange.className = "listItems";
-        // }
-
 
 
 
